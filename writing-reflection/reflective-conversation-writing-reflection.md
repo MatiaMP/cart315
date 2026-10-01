@@ -1,0 +1,9 @@
+300 word reflective summary
+
+The chapter Reflective Conversation with Materials which is an interview with Donald Schön by John Bennett about how designers actually think and work. Schön argues against the idea that design is just a straight line from a plan to a finished product. Instead he shows that real expertise comes from figuring things out as you go and dealing with unexpected surprises and getting a feel for the medium you are working with.
+
+A large part of this is what Schön calls reflection in action, which is being able to adapt and rethink what you are doing right in the middle of working, especially when something unexpected happens. In this case, we are talking about Design... and design is a complicated medium in which every single choice you make has side effects you didnt plan for. He describes this as having a "conversation with materials", where your medium talks back to you with unexpected feedback or "backtalk" as he says. Instead of seeing surprises as mistakes, good designers use them as something they can use to help inspire them and use them as a starting point to look at the problem in a different way.
+
+Schön also talks about tacit knowledge, pointing out that good design makes all the technical mechanics totally invisible until something actually breaks down. On top of the technical stuff, you need to develop taste, which is used as a comparison to an internal gyroscope. It is what lets you look at your own work and tell the difference between good and bad. It also helps bridge the gap between your personal creative vision and what users actually experience.
+
+To conclude, the chapter shifts how you look at design. It is not just following a rigid bluepring but it is an exploratory journey between you, your materials and the people who use your work.
