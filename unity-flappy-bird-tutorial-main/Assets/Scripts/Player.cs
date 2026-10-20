@@ -79,8 +79,8 @@ public class Player : MonoBehaviour
                 return "High Gravity!";
 
             case 1:
-                gravity = defaultGravity * 0.5f;
-                strength = defaultStrength * 0.9f;
+                gravity = defaultGravity * 0.75f;
+                strength = defaultStrength * 0.95f;
                 if (spriteRenderer != null) spriteRenderer.color = new Color(0.5f, 0.8f, 1f);
                 return "Low Gravity!";
 
@@ -88,12 +88,12 @@ public class Player : MonoBehaviour
             case 2:
                 gravity = defaultGravity;
                 strength = defaultStrength;
-                if (spriteRenderer != null) spriteRenderer.color = Color.white;
+                if (spriteRenderer != null) spriteRenderer.color = Color.green;
                 return "Normal Gravity!";
 
         }
 
-        return "Normal Gravity";
+        return "Normal Gravity!";
     }
 
     //resets when restarting game
