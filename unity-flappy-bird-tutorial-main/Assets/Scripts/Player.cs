@@ -64,7 +64,7 @@ public class Player : MonoBehaviour
         }
     }
 
-    public void ApplyRandomGravity()
+    public string ApplyRandomGravity()
     {
         // roll random choice from 0-1-2
 
@@ -76,20 +76,24 @@ public class Player : MonoBehaviour
                 gravity = defaultGravity * 1.6f;
                 strength = defaultStrength * 0.85f;
                 if (spriteRenderer != null) spriteRenderer.color = new Color(1f, 0.5f, 0.5f);
-                break;
+                return "High Gravity!";
 
             case 1:
                 gravity = defaultGravity * 0.5f;
                 strength = defaultStrength * 0.9f;
                 if (spriteRenderer != null) spriteRenderer.color = new Color(0.5f, 0.8f, 1f);
-                break;
+                return "Low Gravity!";
+
 
             case 2:
                 gravity = defaultGravity;
                 strength = defaultStrength;
                 if (spriteRenderer != null) spriteRenderer.color = Color.white;
-                break;
+                return "Normal Gravity!";
+
         }
+
+        return "Normal Gravity";
     }
 
     //resets when restarting game

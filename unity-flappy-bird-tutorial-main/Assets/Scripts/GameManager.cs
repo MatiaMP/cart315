@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.UI;
+using System.Collections;
 
 [DefaultExecutionOrder(-1)]
 public class GameManager : MonoBehaviour
@@ -9,6 +10,9 @@ public class GameManager : MonoBehaviour
     [SerializeField] private Player player;
     [SerializeField] private Spawner spawner;
     [SerializeField] private Text scoreText;
+    
+    [SerializeField] private Text gravityWarningText;
+
     [SerializeField] private GameObject playButton;
     [SerializeField] private GameObject gameOver;
 
@@ -33,6 +37,11 @@ public class GameManager : MonoBehaviour
     private void Start()
     {
         Pause();
+        
+        if (gravityWarningText != null)
+        {
+            gravityWarningText.gameObject.SetActive(false);
+        }
     }
 
     public void Pause()
@@ -54,6 +63,11 @@ public class GameManager : MonoBehaviour
     
         // to reset the gravity on restart
         player.ResetGravity();
+
+        if (gravityWarningText != null)
+        {
+            gravityWarningText.gameObject.SetActive(false);
+        }
         
         Pipes[] pipes = FindObjectsByType<Pipes>(FindObjectsSortMode.None);
 
@@ -78,7 +92,19 @@ public class GameManager : MonoBehaviour
         // check if score htis a multiple of 10
         if (score > 0 && score % 10 == 0)
         {
-            player.ApplyRandomGravity();
+            string warning = player.ApplyRandomGravity();
+            StartCoroutine(ShowWarningRoutine(warning));
+        }
+    }
+
+    private IEnumerator ShowWarningRoutine(string message)
+    {
+        if (gravityWarningText != null)
+        {
+            gravityWarningText.text = message;
+            gravityWarningText.gameObject.SetActive(true);
+            yield return new WaitForSeconds(1.5f);
+            gravityWarningText.gameObject.SetActive(false);
         }
     }
 
